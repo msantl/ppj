@@ -1,0 +1,2 @@
+semantic: invalid implicit conversion from `int` to numeric in initialization
+note: 'y = 2' on line 22

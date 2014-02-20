@@ -1,0 +1,2 @@
+semantic: invalid implicit conversion from `niz(int)` to `int`
+note: 'a [ 1 ] = a' on line 21

@@ -1,0 +1,125 @@
+PPJ			`BASE D
+			MOVE %H 40000, R7
+			CALL F_MAIN
+			HALT
+MODULO			PUSH R0
+			PUSH R1
+			LOAD R1, (R7+12)
+			LOAD R0, (R7+16)
+M_LOOP			CMP R0, R1
+			JR_SLT M_RET
+			SUB R0, R1, R0
+			JR M_LOOP
+M_RET			MOVE R0, R6
+			POP R1
+			POP R0
+			RET
+MNOZI			PUSH R0
+			PUSH R1
+			PUSH R2
+			LOAD R1, (R7+16)
+			LOAD R0, (R7+20)
+			MOVE 0, R6
+			CMP R1, 0
+			JR_SLT P_NEG
+P_POZ			MOVE 1, R2
+			JR P_LOOP
+P_NEG			MOVE -1, R2
+			XOR R2, R0, R0
+			ADD R0, 1, R0
+P_LOOP			CMP R1, 0
+			JR_EQ P_RET
+			ADD R6, R0, R6
+			SUB R1, R2, R1
+			JR P_LOOP
+P_RET			POP R2
+			POP R1
+			POP R0
+			RET
+DIJELI			PUSH R0
+			PUSH R1
+			MOVE 0, R6
+			LOAD R1, (R7+12)
+			LOAD R0, (R7+16)
+D_LOOP			CMP R0, R1
+			JR_SLT D_RET
+			SUB R0, R1, R0
+			ADD R6, 1, R6
+			JR D_LOOP
+D_RET			POP R1
+			POP R0
+			RET
+F_F			; definicija funkcije s parametarima
+			SUB R7, 100, R7; mjesto za lokalne varijable
+			PUSH R0; upamti R0
+			MOVE R7, R0; pomocni registar da nam R7 ne smeta
+			LOAD R5, (R0+108); uzmi vrijednost n sa stoga
+			PUSH R5; spremi prvi operand na stog
+			LOAD R5, (LABEL_0); ucitamo konstantu u R5
+			STORE R4, (KAKAC); spremi vrijednost R4
+			POP R4
+			CMP R4, R5
+			JR_EQ LABEL_2
+			MOVE 0, R5
+			JR LABEL_1
+LABEL_2			MOVE 1, R5
+LABEL_1			LOAD R4, (KAKAC)
+			CMP R5, 0; usporedi s 0
+			JR_EQ LABEL_4
+			LOAD R5, (LABEL_0); ucitamo konstantu u R5
+			MOVE R5, R6; izrazi se zapisuju u R5
+			POP R0; vrati R0
+			ADD R7, 100, R7; mjesto za lokalne varijable
+			RET; kr_return
+			JR LABEL_3
+LABEL_4			;else dio
+			LOAD R5, (R0+108); uzmi vrijednost n sa stoga
+			; dodavanje argumenta na stog za mnozenje
+			 PUSH R5
+			LOAD R5, (R0+108); uzmi vrijednost n sa stoga
+			PUSH R5; spremi prvi operand na stog
+			LOAD R5, (LABEL_0); ucitamo konstantu u R5
+			STORE R4, (KAKAC); spremi vrijednost R4
+			POP R4
+			SUB R4, R5, R5
+			LOAD R4, (KAKAC)
+			; dodavanje argumenta na stog
+			PUSH R5; stavi je na stog
+			; poziv funkcije s parametarima
+			CALL F_F
+			ADD R7, 4, R7; makni argumente sa stoga
+			MOVE R6, R5; spremi povratnu vrijednost u R5
+			; dodavanje drugog argumenta na stog za mnozenje
+			PUSH R5
+			CALL MNOZI
+			ADD R7, 8, R7; bacanje argumenata sa stoga
+			MOVE R6, R5
+			MOVE R5, R6; izrazi se zapisuju u R5
+			POP R0; vrati R0
+			ADD R7, 100, R7; mjesto za lokalne varijable
+			RET; kr_return
+LABEL_3			;zavrsena naredba grananja
+			POP R0; vrati R0
+			ADD R7, 100, R7; mjesto za lokalne varijable
+			RET; povratak iz funkcije bez parametara
+F_MAIN			; definicija funkcije bez parametara
+			SUB R7, 100, R7; mjesto za lokalne varijable
+			PUSH R0; upamti R0
+			MOVE R7, R0; pomocni registar da nam R7 ne smeta
+			LOAD R5, (LABEL_7); ucitamo konstantu u R5
+			; dodavanje argumenta na stog
+			PUSH R5; stavi je na stog
+			; poziv funkcije s parametarima
+			CALL F_F
+			ADD R7, 4, R7; makni argumente sa stoga
+			MOVE R6, R5; spremi povratnu vrijednost u R5
+			MOVE R5, R6; izrazi se zapisuju u R5
+			POP R0; vrati R0
+			ADD R7, 100, R7; mjesto za lokalne varijable
+			RET; kr_return
+			POP R0; vrati R0
+			ADD R7, 100, R7; mjesto za lokalne varijable
+			RET; povratak iz funkcije bez parametara
+KAKAC			`DS 4
+LABEL_0			DW 1
+LABEL_7			DW 5

@@ -1,0 +1,2 @@
+semantic: invalid escaped string '\u' on byte offset 1
+note: ''\u'' on line 114

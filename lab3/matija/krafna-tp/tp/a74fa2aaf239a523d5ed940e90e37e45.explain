@@ -1,0 +1,2 @@
+semantic: can't return const value
+note: 'const int printf ( const char format [ ] ) { int a , b , c ; return 0 ; ( const int ) a ; a = 5 , a = b = 3 , c = 2 ; }' on lines from 15 to 23

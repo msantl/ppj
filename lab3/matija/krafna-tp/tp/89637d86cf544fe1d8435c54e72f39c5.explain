@@ -1,0 +1,2 @@
+semantic: invalid implicit conversion from `int` to numeric in initialization
+note: 'p = 0' on line 2

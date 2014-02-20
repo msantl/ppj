@@ -1,0 +1,69 @@
+#! /bin/bash
+
+# working directory
+CWD=$(pwd)
+
+LEKSICKA=$CWD/leksicka/analizator/
+SINTAKSNA=$CWD/sintaksna/analizator/
+SEMANTIKA=$CWD/semanticka/
+FRISC=$CWD/frisc/
+
+# temporary buffer
+BUFFER=$CWD"/_temp.out"
+GEN_TREE=$CWD/"_gen_tree.in"
+
+# save the absolute input file path
+MYPATH=$CWD"/"$1
+
+# output the source code
+cat -n $MYPATH
+
+# run lexyic analysis
+echo "Zapocinjem leksicku analizu ..."
+cd $LEKSICKA
+./analizator < $MYPATH > $BUFFER
+
+# run syntax analysis
+echo "Zapocinjem sintaksnu analizu ..."
+cd $SINTAKSNA
+./analizator < $BUFFER > $GEN_TREE
+
+# run semantic analyzer
+echo "Zapocinjem semanticku analizu ..."
+cd $SEMANTIKA
+./analizator < $GEN_TREE
+
+# u slucaju greske
+if [ $? -eq 1 ]
+then
+  exit
+fi
+
+
+echo "Generiram izvrsni kod ..."
+cd $FRISC
+./generator < $GEN_TREE
+
+cp a.frisc $CWD 
+
+# return to the starting directory
+cd $CWD
+
+echo "Pokrecem a.frisc ..."
+echo -n "U registru R6 se nalazi: "
+node main.js a.frisc 2> /dev/null
+
+if [ $# -eq 2 ]
+then
+  echo "Pokrecem gcc ..."
+  gcc $MYPATH
+  echo "Pokrecem a.out ..."
+  echo -n "Program je vratio: "
+  ./a.out
+  echo $?
+fi
+
+# remove the temp buffer
+rm $BUFFER
+rm $GEN_TREE
+

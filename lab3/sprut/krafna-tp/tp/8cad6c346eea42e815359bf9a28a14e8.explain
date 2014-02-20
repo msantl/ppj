@@ -1,0 +1,2 @@
+semantic: function f is not callable
+note: 'f ( 3 )' on line 9

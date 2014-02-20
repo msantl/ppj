@@ -1,0 +1,5 @@
+KR_CHAR 1 char
+IDN 1 x
+OP_PRIDRUZI 1 =
+IDN 1 abc
+TOCKAZAREZ 1 ;

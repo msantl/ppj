@@ -1,0 +1,2 @@
+semantic: 5 is not l-value
+note: '5 = 4 && 3 || 5 | a ^ a & a == 'a' + 5 % 2 / ( const char ) 4' on line 20

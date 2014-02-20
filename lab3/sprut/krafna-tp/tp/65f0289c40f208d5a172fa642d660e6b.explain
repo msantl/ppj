@@ -1,0 +1,2 @@
+semantic: coflicting declarations of printf. `funkcija([int] -> int)` and `funkcija([niz(const char)] -> int)`
+note: 'int printf ( int z ) { return 0 ; }' on lines from 22 to 24

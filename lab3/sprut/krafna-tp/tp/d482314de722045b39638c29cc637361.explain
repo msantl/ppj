@@ -1,0 +1,2 @@
+semantic: x is not l-value
+note: 'x = a' on line 10

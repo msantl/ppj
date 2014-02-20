@@ -1,0 +1,254 @@
+prijevodna_jedinica__prijevodna_jedinica_vanjska_deklaracija
+ prijevodna_jedinica__vanjska_deklaracija
+  vanjska_deklaracija__definicija_funkcije
+   definicija_funkcije__ime_tipa_IDN_L_ZAGRADA_lista_parametara_D_ZAGRADA_slozena_naredba
+    ime_tipa__specifikator_tipa
+     specifikator_tipa__KR_INT
+      KR_INT 15 int
+    IDN 15 printf
+    L_ZAGRADA 15 (
+    lista_parametara__deklaracija_parametra
+     deklaracija_parametra__ime_tipa_IDN_L_UGL_ZAGRADA_D_UGL_ZAGRADA
+      ime_tipa__KR_CONST_specifikator_tipa
+       KR_CONST 15 const
+       specifikator_tipa__KR_CHAR
+        KR_CHAR 15 char
+      IDN 15 format
+      L_UGL_ZAGRADA 15 [
+      D_UGL_ZAGRADA 15 ]
+    D_ZAGRADA 15 )
+    slozena_naredba__L_VIT_ZAGRADA_lista_deklaracija_lista_naredbi_D_VIT_ZAGRADA
+     L_VIT_ZAGRADA 15 {
+     lista_deklaracija__lista_deklaracija_deklaracija
+      lista_deklaracija__lista_deklaracija_deklaracija
+       lista_deklaracija__lista_deklaracija_deklaracija
+        lista_deklaracija__deklaracija
+         deklaracija__ime_tipa_lista_init_deklaratora_TOCKAZAREZ
+          ime_tipa__specifikator_tipa
+           specifikator_tipa__KR_INT
+            KR_INT 16 int
+          lista_init_deklaratora__init_deklarator
+           init_deklarator__izravni_deklarator
+            izravni_deklarator__IDN_L_ZAGRADA_KR_VOID_D_ZAGRADA
+             IDN 16 main
+             L_ZAGRADA 16 (
+             KR_VOID 16 void
+             D_ZAGRADA 16 )
+          TOCKAZAREZ 16 ;
+        deklaracija__ime_tipa_lista_init_deklaratora_TOCKAZAREZ
+         ime_tipa__specifikator_tipa
+          specifikator_tipa__KR_INT
+           KR_INT 17 int
+         lista_init_deklaratora__init_deklarator
+          init_deklarator__izravni_deklarator_OP_PRIDRUZI_inicijalizator
+           izravni_deklarator__IDN
+            IDN 17 z
+           OP_PRIDRUZI 17 =
+           inicijalizator__izraz_pridruzivanja
+            izraz_pridruzivanja__log_ili_izraz
+             log_ili_izraz__log_i_izraz
+              log_i_izraz__bin_ili_izraz
+               bin_ili_izraz__bin_xili_izraz
+                bin_xili_izraz__bin_i_izraz
+                 bin_i_izraz__jednakosni_izraz
+                  jednakosni_izraz__odnosni_izraz
+                   odnosni_izraz__aditivni_izraz
+                    aditivni_izraz__multiplikativni_izraz
+                     multiplikativni_izraz__cast_izraz
+                      cast_izraz__unarni_izraz
+                       unarni_izraz__postfiks_izraz
+                        postfiks_izraz__primarni_izraz
+                         primarni_izraz__BROJ
+                          BROJ 17 0
+         TOCKAZAREZ 17 ;
+       deklaracija__ime_tipa_lista_init_deklaratora_TOCKAZAREZ
+        ime_tipa__KR_CONST_specifikator_tipa
+         KR_CONST 18 const
+         specifikator_tipa__KR_INT
+          KR_INT 18 int
+        lista_init_deklaratora__init_deklarator
+         init_deklarator__izravni_deklarator_OP_PRIDRUZI_inicijalizator
+          izravni_deklarator__IDN_L_UGL_ZAGRADA_BROJ_D_UGL_ZAGRADA
+           IDN 18 k
+           L_UGL_ZAGRADA 18 [
+           BROJ 18 4
+           D_UGL_ZAGRADA 18 ]
+          OP_PRIDRUZI 18 =
+          inicijalizator__L_VIT_ZAGRADA_lista_izraza_pridruzivanja_D_VIT_ZAGRADA
+           L_VIT_ZAGRADA 18 {
+           lista_izraza_pridruzivanja__lista_izraza_pridruzivanja_ZAREZ_izraz_pridruzivanja
+            lista_izraza_pridruzivanja__lista_izraza_pridruzivanja_ZAREZ_izraz_pridruzivanja
+             lista_izraza_pridruzivanja__lista_izraza_pridruzivanja_ZAREZ_izraz_pridruzivanja
+              lista_izraza_pridruzivanja__izraz_pridruzivanja
+               izraz_pridruzivanja__log_ili_izraz
+                log_ili_izraz__log_i_izraz
+                 log_i_izraz__bin_ili_izraz
+                  bin_ili_izraz__bin_xili_izraz
+                   bin_xili_izraz__bin_i_izraz
+                    bin_i_izraz__jednakosni_izraz
+                     jednakosni_izraz__odnosni_izraz
+                      odnosni_izraz__aditivni_izraz
+                       aditivni_izraz__multiplikativni_izraz
+                        multiplikativni_izraz__cast_izraz
+                         cast_izraz__unarni_izraz
+                          unarni_izraz__postfiks_izraz
+                           postfiks_izraz__primarni_izraz
+                            primarni_izraz__BROJ
+                             BROJ 18 0
+              ZAREZ 18 ,
+              izraz_pridruzivanja__log_ili_izraz
+               log_ili_izraz__log_i_izraz
+                log_i_izraz__bin_ili_izraz
+                 bin_ili_izraz__bin_xili_izraz
+                  bin_xili_izraz__bin_i_izraz
+                   bin_i_izraz__jednakosni_izraz
+                    jednakosni_izraz__odnosni_izraz
+                     odnosni_izraz__aditivni_izraz
+                      aditivni_izraz__aditivni_izraz_PLUS_multiplikativni_izraz
+                       aditivni_izraz__multiplikativni_izraz
+                        multiplikativni_izraz__cast_izraz
+                         cast_izraz__unarni_izraz
+                          unarni_izraz__postfiks_izraz
+                           postfiks_izraz__primarni_izraz
+                            primarni_izraz__BROJ
+                             BROJ 18 2
+                       PLUS 18 +
+                       multiplikativni_izraz__cast_izraz
+                        cast_izraz__unarni_izraz
+                         unarni_izraz__postfiks_izraz
+                          postfiks_izraz__primarni_izraz
+                           primarni_izraz__BROJ
+                            BROJ 18 3
+             ZAREZ 18 ,
+             izraz_pridruzivanja__log_ili_izraz
+              log_ili_izraz__log_i_izraz
+               log_i_izraz__bin_ili_izraz
+                bin_ili_izraz__bin_ili_izraz_OP_BIN_ILI_bin_xili_izraz
+                 bin_ili_izraz__bin_xili_izraz
+                  bin_xili_izraz__bin_i_izraz
+                   bin_i_izraz__jednakosni_izraz
+                    jednakosni_izraz__odnosni_izraz
+                     odnosni_izraz__aditivni_izraz
+                      aditivni_izraz__multiplikativni_izraz
+                       multiplikativni_izraz__cast_izraz
+                        cast_izraz__unarni_izraz
+                         unarni_izraz__postfiks_izraz
+                          postfiks_izraz__primarni_izraz
+                           primarni_izraz__BROJ
+                            BROJ 18 8
+                 OP_BIN_ILI 18 |
+                 bin_xili_izraz__bin_i_izraz
+                  bin_i_izraz__jednakosni_izraz
+                   jednakosni_izraz__odnosni_izraz
+                    odnosni_izraz__aditivni_izraz
+                     aditivni_izraz__multiplikativni_izraz
+                      multiplikativni_izraz__cast_izraz
+                       cast_izraz__unarni_izraz
+                        unarni_izraz__postfiks_izraz
+                         postfiks_izraz__primarni_izraz
+                          primarni_izraz__BROJ
+                           BROJ 18 5
+            ZAREZ 18 ,
+            izraz_pridruzivanja__log_ili_izraz
+             log_ili_izraz__log_i_izraz
+              log_i_izraz__bin_ili_izraz
+               bin_ili_izraz__bin_xili_izraz
+                bin_xili_izraz__bin_i_izraz
+                 bin_i_izraz__jednakosni_izraz
+                  jednakosni_izraz__odnosni_izraz
+                   odnosni_izraz__aditivni_izraz
+                    aditivni_izraz__multiplikativni_izraz
+                     multiplikativni_izraz__cast_izraz
+                      cast_izraz__unarni_izraz
+                       unarni_izraz__postfiks_izraz
+                        postfiks_izraz__primarni_izraz
+                         primarni_izraz__IDN
+                          IDN 18 z
+           D_VIT_ZAGRADA 18 }
+        TOCKAZAREZ 18 ;
+      deklaracija__ime_tipa_lista_init_deklaratora_TOCKAZAREZ
+       ime_tipa__KR_CONST_specifikator_tipa
+        KR_CONST 19 const
+        specifikator_tipa__KR_CHAR
+         KR_CHAR 19 char
+       lista_init_deklaratora__init_deklarator
+        init_deklarator__izravni_deklarator_OP_PRIDRUZI_inicijalizator
+         izravni_deklarator__IDN_L_UGL_ZAGRADA_BROJ_D_UGL_ZAGRADA
+          IDN 19 k9
+          L_UGL_ZAGRADA 19 [
+          BROJ 19 0x030
+          D_UGL_ZAGRADA 19 ]
+         OP_PRIDRUZI 19 =
+         inicijalizator__izraz_pridruzivanja
+          izraz_pridruzivanja__log_ili_izraz
+           log_ili_izraz__log_i_izraz
+            log_i_izraz__bin_ili_izraz
+             bin_ili_izraz__bin_xili_izraz
+              bin_xili_izraz__bin_i_izraz
+               bin_i_izraz__jednakosni_izraz
+                jednakosni_izraz__odnosni_izraz
+                 odnosni_izraz__aditivni_izraz
+                  aditivni_izraz__multiplikativni_izraz
+                   multiplikativni_izraz__cast_izraz
+                    cast_izraz__unarni_izraz
+                     unarni_izraz__postfiks_izraz
+                      postfiks_izraz__primarni_izraz
+                       primarni_izraz__NIZ_ZNAKOVA
+                        NIZ_ZNAKOVA 19 "abcd\0f"
+       TOCKAZAREZ 19 ;
+     lista_naredbi__naredba
+      naredba__naredba_skoka
+       naredba_skoka__KR_RETURN_izraz_TOCKAZAREZ
+        KR_RETURN 21 return
+        izraz__izraz_pridruzivanja
+         izraz_pridruzivanja__log_ili_izraz
+          log_ili_izraz__log_i_izraz
+           log_i_izraz__bin_ili_izraz
+            bin_ili_izraz__bin_xili_izraz
+             bin_xili_izraz__bin_i_izraz
+              bin_i_izraz__jednakosni_izraz
+               jednakosni_izraz__odnosni_izraz
+                odnosni_izraz__aditivni_izraz
+                 aditivni_izraz__multiplikativni_izraz
+                  multiplikativni_izraz__cast_izraz
+                   cast_izraz__unarni_izraz
+                    unarni_izraz__postfiks_izraz
+                     postfiks_izraz__primarni_izraz
+                      primarni_izraz__BROJ
+                       BROJ 21 0
+        TOCKAZAREZ 21 ;
+     D_VIT_ZAGRADA 22 }
+ vanjska_deklaracija__definicija_funkcije
+  definicija_funkcije__ime_tipa_IDN_L_ZAGRADA_KR_VOID_D_ZAGRADA_slozena_naredba
+   ime_tipa__specifikator_tipa
+    specifikator_tipa__KR_INT
+     KR_INT 24 int
+   IDN 24 main
+   L_ZAGRADA 24 (
+   KR_VOID 24 void
+   D_ZAGRADA 24 )
+   slozena_naredba__L_VIT_ZAGRADA_lista_naredbi_D_VIT_ZAGRADA
+    L_VIT_ZAGRADA 24 {
+    lista_naredbi__naredba
+     naredba__naredba_skoka
+      naredba_skoka__KR_RETURN_izraz_TOCKAZAREZ
+       KR_RETURN 25 return
+       izraz__izraz_pridruzivanja
+        izraz_pridruzivanja__log_ili_izraz
+         log_ili_izraz__log_i_izraz
+          log_i_izraz__bin_ili_izraz
+           bin_ili_izraz__bin_xili_izraz
+            bin_xili_izraz__bin_i_izraz
+             bin_i_izraz__jednakosni_izraz
+              jednakosni_izraz__odnosni_izraz
+               odnosni_izraz__aditivni_izraz
+                aditivni_izraz__multiplikativni_izraz
+                 multiplikativni_izraz__cast_izraz
+                  cast_izraz__unarni_izraz
+                   unarni_izraz__postfiks_izraz
+                    postfiks_izraz__primarni_izraz
+                     primarni_izraz__BROJ
+                      BROJ 25 0
+       TOCKAZAREZ 25 ;
+    D_VIT_ZAGRADA 26 }
+<init_deklarator> ::= <izravni_deklarator> OP_PRIDRUZI(18,=) <inicijalizator>

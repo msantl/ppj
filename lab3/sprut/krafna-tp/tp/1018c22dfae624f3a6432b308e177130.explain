@@ -1,0 +1,2 @@
+semantic: can't initialize array with scalar value
+note: 'x [ 5 ] = c [ 3 ]' on line 10

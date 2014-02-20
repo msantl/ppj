@@ -1,0 +1,2 @@
+semantic: coflicting declarations of f. `funkcija([int,int] -> void)` and `funkcija([int,int] -> int)`
+note: 'void f ( int a , int b ) { int a ; a = a == 5 * 4 <= 3 > 2 + 1 * ( char ) 4 ; return ; }' on lines from 8 to 12

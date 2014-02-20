@@ -1,0 +1,2 @@
+semantic: type mismatch in call of function f2 on param 2. no implicit conversion from `int` to `niz(int)`
+note: 'f2 ( 1 , a [ 0 ] )' on line 11

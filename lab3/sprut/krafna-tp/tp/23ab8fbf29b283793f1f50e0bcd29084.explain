@@ -1,0 +1,2 @@
+semantic: function 'f' already defined
+note: 'int f ( void ) { return 0 ; }' on lines from 7 to 9

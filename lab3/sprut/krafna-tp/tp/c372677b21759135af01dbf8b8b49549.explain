@@ -1,0 +1,2 @@
+semantic: array size must be positive int less or equal 1024
+note: 'k9 [ 0x401 ]' on line 19

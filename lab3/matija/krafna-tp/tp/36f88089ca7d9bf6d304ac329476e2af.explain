@@ -1,0 +1,2 @@
+semantic: can't initialize array with scalar value
+note: 'e [ 6 ] = n [ 6 ]' on line 12

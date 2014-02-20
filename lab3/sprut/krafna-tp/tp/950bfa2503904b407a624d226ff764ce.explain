@@ -1,0 +1,2 @@
+semantic: can't initialize scalar value with array
+note: 'a = { 1 }' on line 2

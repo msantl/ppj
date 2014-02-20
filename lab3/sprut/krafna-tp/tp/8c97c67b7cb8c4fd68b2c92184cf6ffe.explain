@@ -1,0 +1,2 @@
+semantic: can't initialize scalar value with array
+note: 'tmp = "te  \nst"' on line 7

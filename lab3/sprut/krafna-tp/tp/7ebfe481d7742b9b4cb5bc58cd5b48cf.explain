@@ -1,0 +1,2 @@
+semantic: can't return const value
+note: 'const int f ( void ) { int a ; int a ; return 0 ; }' on lines from 1 to 5

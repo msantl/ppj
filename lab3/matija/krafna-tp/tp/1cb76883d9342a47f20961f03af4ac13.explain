@@ -1,0 +1,2 @@
+semantic: can't [] on `int`
+note: 'a [ 1500 ]' on line 6

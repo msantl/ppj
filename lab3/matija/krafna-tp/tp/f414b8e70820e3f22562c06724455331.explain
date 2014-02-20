@@ -1,0 +1,2 @@
+semantic: const variables must be initialized
+note: 'x [ 5 ]' on line 10

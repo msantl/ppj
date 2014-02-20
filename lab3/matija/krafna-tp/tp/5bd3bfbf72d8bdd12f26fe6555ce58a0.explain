@@ -1,0 +1,2 @@
+semantic: can't initialize array with scalar value
+note: 's [ 199 ] = h' on line 17

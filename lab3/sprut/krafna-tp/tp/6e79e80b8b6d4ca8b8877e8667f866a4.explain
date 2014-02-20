@@ -1,0 +1,2 @@
+semantic: type mismatch in call of function f on param 3. no implicit conversion from `char` to `niz(char)`
+note: 'f ( 1 , 2 , a )' on line 5

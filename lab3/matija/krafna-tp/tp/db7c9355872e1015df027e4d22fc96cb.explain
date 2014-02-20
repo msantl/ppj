@@ -1,0 +1,2 @@
+semantic: invalid escaped string '\c' on byte offset 1
+note: ''\c'' on line 8

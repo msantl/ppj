@@ -1,0 +1,2 @@
+semantic: `int` can't be converted to `void`
+note: '( void ) 5' on line 13

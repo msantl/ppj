@@ -1,0 +1,76 @@
+#!/bin/bash
+
+TEST_DIR="testovi/"
+FRISC="node main.js "
+RUN="./"
+BACK="../"
+GENERATOR="generator"
+
+OUT_EXT="/test.out"
+IN_ANA_EXT="/test.in"
+TEMP_FILE="my_result.txt"
+TEMP_TIME="my_time.txt"
+
+lista_krivih=""
+vrijeme=0
+tocno=0
+ukupno=0
+
+# create temp files
+touch $TEMP_TIME
+touch $TEMP_FILE
+
+testovi=$(ls $TEST_DIR| cut -f1 -d. | uniq)
+
+if [ $# -ne 0 ] 
+then
+  testovi=$@
+fi
+
+# create executables for analyzer
+echo "Creating executables for analyzer: " >& 2
+make clean >& 2
+make >& 2
+
+printf "%-35s %4s %s \n" "Test Case" "STAT" "FRISC time"
+for name in $testovi
+do
+  # run generator on input file and creates a.firsc (should create it by itself)
+  (time $RUN$GENERATOR < $TEST_DIR$name$IN_ANA_EXT 2> /dev/null ) &> $TEMP_TIME
+
+  seconds1=$(cat $TEMP_TIME |grep real |cut -f2 -d'm' |cut -f1 -d's')
+  minutes1=$(cat $TEMP_TIME |grep real |cut -f1 -d'm' |cut -f2)
+  vrijeme=$(echo "$vrijeme + $seconds1 + 60 * $minutes1" | bc)
+
+  # run generated program with node main.js a.frist
+  (time ${FRISC}a.frisc > $TEMP_FILE 2> /dev/null ) &> $TEMP_TIME
+
+  seconds2=$(cat $TEMP_TIME |grep real |cut -f2 -d'm' |cut -f1 -d's')
+  minutes2=$(cat $TEMP_TIME |grep real |cut -f1 -d'm' |cut -f2)
+  vrijeme=$(echo "$vrijeme + $seconds2 + 60 * $minutes2" | bc)
+
+  diff $TEMP_FILE $TEST_DIR$name$OUT_EXT &> /dev/null
+
+  if [ $? -eq 0 ]
+  then
+    tocno=$((tocno + 1))
+    stat="OK"
+  else
+    lista_krivih=$lista_krivih" "$name
+    stat="WA"
+  fi
+
+  test_case_time=$(echo "$minutes2 * 60 + $seconds2" | bc)
+  printf "%-35s %4s total: %-6.2lf \n" $name $stat $test_case_time
+
+  ukupno=$((ukupno + 1))
+done
+
+echo "STATS: $tocno/$ukupno IN $vrijeme s"
+if [ $ukupno -ne $tocno ]
+then
+  echo "Wrong ones: "$lista_krivih
+fi
+
+rm $TEMP_FILE $TEMP_TIME
+

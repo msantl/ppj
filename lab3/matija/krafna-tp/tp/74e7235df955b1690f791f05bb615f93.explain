@@ -1,0 +1,2 @@
+semantic: coflicting declarations of foo. `funkcija([int,int,char,int] -> void)` and `funkcija([int,int,char] -> void)`
+note: 'void foo ( int x , int c , char h , int s ) { int i = fact ( x ) ; int a = a + 1 ; void foo3 ( void ) ; int niz1 [ 5 ] = { 1 , 2 , 3 } ; for ( i = 0 ; i < 5 ; i ++ ) break ; while ( 1 ) { break ; i = i + 2 ; } return ; }' on lines from 34 to 52

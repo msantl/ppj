@@ -1,0 +1,2 @@
+semantic: type mismatch in call of function f on param 2. no implicit conversion from `int` to `char`
+note: 'f ( a [ 0 ] + 5 + 'a' , '2' + 4 )' on line 21

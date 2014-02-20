@@ -1,0 +1,2 @@
+semantic: conflicting declarations of function printa
+note: 'printa ( int a )' on line 22

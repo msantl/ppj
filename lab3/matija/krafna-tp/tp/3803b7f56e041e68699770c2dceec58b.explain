@@ -1,0 +1,2 @@
+semantic: `char` can't be converted to `void`
+note: '( void ) 'a'' on line 22

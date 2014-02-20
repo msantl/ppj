@@ -1,0 +1,2 @@
+semantic: invalid implicit conversion from `int` to numeric in initialization
+note: 'n = a' on line 11
